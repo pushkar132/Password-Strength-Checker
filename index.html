@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Strength Checker</title>
+  <script>
+    function checkPasswordStrength() {
+      var password = document.getElementById('password').value;
+
+      if (password.length < 8) {
+        document.getElementById('strength').innerHTML = 'Password is weak';
+      } else {
+        document.getElementById('strength').innerHTML = 'Password is strong';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Password Strength Checker</h1>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" onkeyup="checkPasswordStrength()">
+
+  <p id="strength"></p>
+</body>
+</html>
